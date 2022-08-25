@@ -98,14 +98,22 @@
 //  x=  2 +4  + nombre; //sin embargo si se pone primero los numeros de igual forma se realizará la suma
 //  console.log(x)
 
-1
-10.0
-"Carlos"
-//nombre = "Juan";// esto es una literal de tipo string, las literales son los valores que les asignamos a nuestras variables
-//Sin embargo esto no es una buena practica, la manera correcta de declarar es 
-let nombre = "Juan";
-console.log(nombre);
+// 1
+// 10.0
+// "Carlos"
+// //nombre = "Juan";// esto es una literal de tipo string, las literales son los valores que les asignamos a nuestras variables
+// //Sin embargo esto no es una buena practica, la manera correcta de declarar es 
+// let nombre = "Juan";
+// console.log(nombre);
 
-const apellido = "Perez";
-console.log(apellido);
+// const apellido = "Perez";
+// console.log(apellido);
 //apellido="sdf"; no se puede reasignar el valor a una constante
+
+let nombreCompleto= "Juan Pérez";
+console.log(nombreCompleto);
+
+let x,y;
+x=10, y = 20;
+let z = x+y;
+console.log(z);
