@@ -20,5 +20,47 @@ var objeto = {
     apellido:"Cabrera", 
     telefono:"000000"
 }
-
 console.log(typeof(objeto))
+
+// Tipo de dato boolean (True,false)
+
+var bandera = true;
+console.log(bandera);
+console.log(typeof(bandera));
+
+// Tipo de dato funcion (Una funcion tambien es un tipo de dato
+
+function miFuncion(){}
+console.log(miFuncion)
+console.log(typeof(miFuncion))
+
+// Tipo de dato symbol
+var simbolo = Symbol("mi simbolo");
+console.log(simbolo)
+console.log(typeof(simbolo))
+
+// Tipo Clase (en JavaScript las clases tambien son funciones)
+
+class Persona {
+    constructor(nombre, apellido){
+        this.nombre= nombre;
+        this.apellido=apellido;
+    }
+}
+
+console.log(Persona)
+console.log(typeof(Persona))
+
+//Tipo Undefined
+
+var x;
+console.log(x)
+console.log(typeof(x))
+
+x = undefined;
+console.log(x)
+console.log(typeof(x))
+// null = ausencia de valor
+var y = null;
+console.log(y)
+console.log(typeof(null))
