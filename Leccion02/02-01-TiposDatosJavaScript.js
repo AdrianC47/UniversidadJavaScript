@@ -110,10 +110,28 @@
 // console.log(apellido);
 //apellido="sdf"; no se puede reasignar el valor a una constante
 
-let nombreCompleto= "Juan Pérez";
-console.log(nombreCompleto);
+// let nombreCompleto= "Juan Pérez";
+// console.log(nombreCompleto);
 
-let x,y;
-x=10, y = 20;
-let z = x+y;
-console.log(z);
+// let x,y;
+// x=10, y = 20;
+// let z = x+y;
+// console.log(z);
+
+let nombreCompleto = "Juan Perez";
+//OjO que JS es sensible a mayusculas y minusculas
+let nombrecompleto = "Carlos Lara";
+console.log(nombreCompleto);
+console.log(nombrecompleto);
+
+//El nombre de una variable no puede comenzar con numeros, se puede usar mayuscula minuscula, _ o $
+
+let a1nombreCompleto;
+let _nombreCompleto;
+let $nombreCompleto;
+//let 1nombreCompleto;
+
+// tambien no se pueden usar los nombres de las palabras reservadas
+//let break=10;
+let abreak=10;
+//de igual forma se recomeienda no usar asi sea en conjunto con otras palabrass
