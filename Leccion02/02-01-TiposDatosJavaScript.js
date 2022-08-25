@@ -64,3 +64,13 @@ console.log(typeof(x))
 var y = null;
 console.log(y)
 console.log(typeof(null))
+
+// Los arreglos son de tipo de dato objeto 
+ 
+var autos = ['BMW', 'Audi', 'Volvo'];
+console.log(autos)
+console.log(typeof(autos))
+
+var z= '';
+console.log(z);
+console.log(typeof(z))
