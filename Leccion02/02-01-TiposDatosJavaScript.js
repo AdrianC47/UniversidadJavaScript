@@ -5,6 +5,10 @@ Ejemplos de tipos de datos en JavaScript
 var nombre = "Carlos";
 console.log(nombre)
 
+nombre=140.5
+console.log(nombre) //las variables son dinamicas es decir que pueden cambiar de tipo, para saber su tipo
+console.log(typeof(nombre)) // para saber el tipo se usa el typeof
+
 //Tipo de dato numerico
 var numero =25;
 console.log(numero)
@@ -17,4 +21,4 @@ var objeto = {
     telefono:"000000"
 }
 
-console.log(objeto)
+console.log(typeof(objeto))
