@@ -128,9 +128,25 @@
 //     console.log("El padre no puede asistir al dia del juego")
 // }
 
-// Operador Ternatio en JavaScript
-let resultado = (1>2)? "Verdadero": "Falso";
-console.log(resultado)
-let numero= 12;
-resultado = (numero % 2 == 0) ? "Numero Par": "Numero Impar";
-console.log(resultado)
+// Operador Ternario en JavaScript
+// let resultado = (1>2)? "Verdadero": "Falso";
+// console.log(resultado)
+// let numero= 12;
+// resultado = (numero % 2 == 0) ? "Numero Par": "Numero Impar";
+// console.log(resultado)
+
+let miNumero = "10";
+console.log(typeof(miNumero));
+
+// miNumero=Number(miNumero);
+let edad =Number(miNumero);
+console.log(typeof(edad))
+
+if (edad >= 18){
+    console.log("Puede votar");
+}else {
+    console.log("Menor de edad!! no puede votar")
+}
+
+let pregunta = (edad >=18)? "Puede votar": "Menor de Edad !! No puede votar";
+console.log(pregunta);
