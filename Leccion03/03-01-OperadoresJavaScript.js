@@ -73,10 +73,25 @@
 // z = a === c  //pregunta si es igual el valor y el tipo
 // console.log(z)
 
-//Operador Distintito de
-let a = 3, b=2, c="3";
-let z = a != c; //pregunta si es igual el valor  sin importar el tipo
+//Operador Distinto de
+// let a = 3, b=2, c="3";
+// let z = a != c; //pregunta si es igual el valor  sin importar el tipo
+// console.log(z);
+
+// z = a !== c  //pregunta si es igual el valor y el tipo
+// console.log(z)
+
+//Operador Distinto de
+let a = 3, b=3, c= "3";
+
+let z = a < b;
 console.log(z);
 
-z = a !== c  //pregunta si es igual el valor y el tipo
-console.log(z)
+z = a <= b;
+console.log(z);
+
+z =  a > b;
+console.log(z);
+
+z = a >=b;
+console.log(z);
