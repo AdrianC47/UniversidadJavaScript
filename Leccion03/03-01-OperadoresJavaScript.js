@@ -151,31 +151,44 @@
 // let pregunta = (edad >=18)? "Puede votar": "Menor de Edad !! No puede votar";
 // console.log(pregunta);
 
-let miNumero = "18x";
-console.log(typeof(miNumero));
+//isNan ****
+// let miNumero = "18x";
+// console.log(typeof(miNumero));
 
-// miNumero=Number(miNumero);
-let edad =Number(miNumero);
-console.log((edad)) //Retorna NaN que significa Not a Number
-
-
-if (isNaN(edad)){
-    console.log("No es un numero")
-} else {
-
-if (edad >= 18){
-    console.log("Puede votar");
-}else {
-    console.log("Menor de edad!! no puede votar")
-}
-}
+// // miNumero=Number(miNumero);
+// let edad =Number(miNumero);
+// console.log((edad)) //Retorna NaN que significa Not a Number
 
 
-if (isNaN(edad)){
-    console.log("No es un numero")
-} else{
-    let pregunta = (edad >=18)? "Puede votar": "Menor de Edad !! No puede votar";
-    console.log(pregunta);
-}
+// if (isNaN(edad)){
+//     console.log("No es un numero")
+// } else {
+
+// if (edad >= 18){
+//     console.log("Puede votar");
+// }else {
+//     console.log("Menor de edad!! no puede votar")
+// }
+// }
 
 
+// if (isNaN(edad)){
+//     console.log("No es un numero")
+// } else{
+//     let pregunta = (edad >=18)? "Puede votar": "Menor de Edad !! No puede votar";
+//     console.log(pregunta);
+// }
+
+
+let x = 5;
+let y = 10;
+let z = ++x + y--;
+console.log(x);
+console.log(y);
+console.log(z)
+ 
+let resultado = 4 + 5 * 6 / 3;
+console.log(resultado);
+
+resultado = (4+5)*6/3;
+console.log(resultado)
