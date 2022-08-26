@@ -96,9 +96,16 @@
 // z = a >=b;
 // console.log(z);
 
-let a = 8
-if(a % 2 == 0){
-    console.log('Es numero par');
+// let a = 8
+// if(a % 2 == 0){
+//     console.log('Es numero par');
+// }else{
+//     console.log("Es un numero impar");
+// }
+
+let edad = 20, adulto = 18;
+if(edad >= adulto){
+    console.log("Es mayor de edad")
 }else{
-    console.log("Es un numero impar");
+    console.log("Es menor de edad")
 }
