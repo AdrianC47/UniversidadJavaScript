@@ -82,16 +82,23 @@
 // console.log(z)
 
 //Operador Distinto de
-let a = 3, b=3, c= "3";
+// let a = 3, b=3, c= "3";
 
-let z = a < b;
-console.log(z);
+// let z = a < b;
+// console.log(z);
 
-z = a <= b;
-console.log(z);
+// z = a <= b;
+// console.log(z);
 
-z =  a > b;
-console.log(z);
+// z =  a > b;
+// console.log(z);
 
-z = a >=b;
-console.log(z);
+// z = a >=b;
+// console.log(z);
+
+let a = 8
+if(a % 2 == 0){
+    console.log('Es numero par');
+}else{
+    console.log("Es un numero impar");
+}
