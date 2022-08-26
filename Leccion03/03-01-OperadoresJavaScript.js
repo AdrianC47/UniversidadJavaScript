@@ -103,9 +103,27 @@
 //     console.log("Es un numero impar");
 // }
 
-let edad = 20, adulto = 18;
-if(edad >= adulto){
-    console.log("Es mayor de edad")
-}else{
-    console.log("Es menor de edad")
+// let edad = 20, adulto = 18;
+// if(edad >= adulto){
+//     console.log("Es mayor de edad")
+// }else{
+//     console.log("Es menor de edad")
+// }
+
+//Operador AND && true si ambos operandos son true
+//  let a = 25;
+//  let valMin = 0;
+//  let valMax = 10;
+//  if(a >= valMin && a <=valMax){
+//     console.log("Comprendido dentro del rango")
+//  } else{
+//     console.log("Fuera del rango")
+//  }
+
+// Operador OR || true si cualquier operando es true
+let vacaciones = false, diaDescanso = true;
+if(vacaciones || diaDescanso){
+    console.log("El Padre puede asistir al dia del juego")
+} else{
+    console.log("El padre no puede asistir al dia del juego")
 }
