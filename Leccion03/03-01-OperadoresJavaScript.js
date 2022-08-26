@@ -52,17 +52,23 @@
 //  console.log(z)
 
 //Operadores de Asignación
-let a = 1;
+// let a = 1;
 
-a += 3; //a = a + 3
-console.log(a)
-a -= 2; //a = a -2
-console.log(a)
-a *= 2; //a = a *2
-console.log(a)
-a /= 2; //a = a /2
-console.log(a)
-a %= 2; //a = a %2
-console.log(a)
+// a += 3; //a = a + 3
+// console.log(a)
+// a -= 2; //a = a -2
+// console.log(a)
+// a *= 2; //a = a *2
+// console.log(a)
+// a /= 2; //a = a /2
+// console.log(a)
+// a %= 2; //a = a %2
+// console.log(a)
 
+//Operadores de Comparacion
+let a = 3, b=2, c="3";
+let z = a == b; //pregunta si es igual el valor  sin importar el tipo
+console.log(z)
 
+z = a === c  //pregunta si es igual el valor y el tipo
+console.log(z)
