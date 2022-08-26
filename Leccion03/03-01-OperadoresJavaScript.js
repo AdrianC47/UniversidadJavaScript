@@ -121,9 +121,16 @@
 //  }
 
 // Operador OR || true si cualquier operando es true
-let vacaciones = false, diaDescanso = true;
-if(vacaciones || diaDescanso){
-    console.log("El Padre puede asistir al dia del juego")
-} else{
-    console.log("El padre no puede asistir al dia del juego")
-}
+// let vacaciones = false, diaDescanso = true;
+// if(vacaciones || diaDescanso){
+//     console.log("El Padre puede asistir al dia del juego")
+// } else{
+//     console.log("El padre no puede asistir al dia del juego")
+// }
+
+// Operador Ternatio en JavaScript
+let resultado = (1>2)? "Verdadero": "Falso";
+console.log(resultado)
+let numero= 12;
+resultado = (numero % 2 == 0) ? "Numero Par": "Numero Impar";
+console.log(resultado)
