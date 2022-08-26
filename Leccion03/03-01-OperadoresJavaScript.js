@@ -39,15 +39,30 @@
 // console.log(b);
 // console.log(z);
 
-let a = 3, b =2, c =1, d = 4;
+// let a = 3, b =2, c =1, d = 4;
 
-let z = a * b + c / d; //las expresiones se evaluan de izquierda a derecha
-console.log(z)
+// let z = a * b + c / d; //las expresiones se evaluan de izquierda a derecha
+// console.log(z)
 
-z = c + a  * b / d; // sin embargo toma prioridad el producto
-console.log(z)
+// z = c + a  * b / d; // sin embargo toma prioridad el producto
+// console.log(z)
 
-// se puede modifcar el orden de las operaciones usando parentesis
- z= (c +a) *b /c;
- console.log(z)
+// // se puede modifcar el orden de las operaciones usando parentesis
+//  z= (c +a) *b /c;
+//  console.log(z)
+
+//Operadores de Asignación
+let a = 1;
+
+a += 3; //a = a + 3
+console.log(a)
+a -= 2; //a = a -2
+console.log(a)
+a *= 2; //a = a *2
+console.log(a)
+a /= 2; //a = a /2
+console.log(a)
+a %= 2; //a = a %2
+console.log(a)
+
 
