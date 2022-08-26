@@ -66,9 +66,17 @@
 // console.log(a)
 
 //Operadores de Comparacion
-let a = 3, b=2, c="3";
-let z = a == b; //pregunta si es igual el valor  sin importar el tipo
-console.log(z)
+// let a = 3, b=2, c="3";
+// let z = a == b; //pregunta si es igual el valor  sin importar el tipo
+// console.log(z)
 
-z = a === c  //pregunta si es igual el valor y el tipo
+// z = a === c  //pregunta si es igual el valor y el tipo
+// console.log(z)
+
+//Operador Distintito de
+let a = 3, b=2, c="3";
+let z = a != c; //pregunta si es igual el valor  sin importar el tipo
+console.log(z);
+
+z = a !== c  //pregunta si es igual el valor y el tipo
 console.log(z)
