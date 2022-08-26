@@ -135,18 +135,47 @@
 // resultado = (numero % 2 == 0) ? "Numero Par": "Numero Impar";
 // console.log(resultado)
 
-let miNumero = "10";
+// let miNumero = "10";
+// console.log(typeof(miNumero));
+
+// // miNumero=Number(miNumero);
+// let edad =Number(miNumero);
+// console.log(typeof(edad))
+
+// if (edad >= 18){
+//     console.log("Puede votar");
+// }else {
+//     console.log("Menor de edad!! no puede votar")
+// }
+
+// let pregunta = (edad >=18)? "Puede votar": "Menor de Edad !! No puede votar";
+// console.log(pregunta);
+
+let miNumero = "18x";
 console.log(typeof(miNumero));
 
 // miNumero=Number(miNumero);
 let edad =Number(miNumero);
-console.log(typeof(edad))
+console.log((edad)) //Retorna NaN que significa Not a Number
+
+
+if (isNaN(edad)){
+    console.log("No es un numero")
+} else {
 
 if (edad >= 18){
     console.log("Puede votar");
 }else {
     console.log("Menor de edad!! no puede votar")
 }
+}
 
-let pregunta = (edad >=18)? "Puede votar": "Menor de Edad !! No puede votar";
-console.log(pregunta);
+
+if (isNaN(edad)){
+    console.log("No es un numero")
+} else{
+    let pregunta = (edad >=18)? "Puede votar": "Menor de Edad !! No puede votar";
+    console.log(pregunta);
+}
+
+
