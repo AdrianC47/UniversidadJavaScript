@@ -73,24 +73,45 @@
 
 // console.log(mensaje);
 
-let numero = 35;
+// let numero = 35;
 
-let numeroTexto = 'Valor desconocido';
+// let numeroTexto = 'Valor desconocido';
 
-switch(numero){
-    case 1:
-        numeroTexto = 'Número uno';
+// switch(numero){
+//     case 1:
+//         numeroTexto = 'Número uno';
+//         break;
+//     case 2:
+//         numeroTexto = "Número dos";
+//         break;
+//     case 3:
+//         numeroTexto = "Número tres";
+//         break;
+//     case 4:
+//         numeroTexto = "Número cuatro";
+//         break;
+//     default: //en el caso de que no coincida con ningun caso se pone el default
+//         numeroTexto = 'Caso no encontrado';//puede ir al principio o al final pero si se pone al inicio poner tambien el break y se se pone al final es opcional
+//     }
+// console.log(numeroTexto);
+
+let mes = 4 ;
+let estacion = 'Estación desconocida';
+switch(mes){
+    case 1: case 2: case 12:
+        estacion = 'Invierno';
         break;
-    case 2:
-        numeroTexto = "Número dos";
+    case 3: case 4: case 5:
+        estacion = 'Primavera';
         break;
-    case 3:
-        numeroTexto = "Número tres";
+    case 6: case 7: case 8:
+        estacion = 'Verano';
         break;
-    case 4:
-        numeroTexto = "Número cuatro";
+    case 9: case 10: case 11:
+        estacion = "Otoño";
         break;
-    default: //en el caso de que no coincida con ningun caso se pone el default
-        numeroTexto = 'Caso no encontrado';//puede ir al principio o al final pero si se pone al inicio poner tambien el break y se se pone al final es opcional
-    }
-console.log(numeroTexto);
+    default:
+        estacion = "Valor incorrecto"; 
+}
+
+console.log(estacion);
