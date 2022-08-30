@@ -25,9 +25,20 @@
 // }
 // console.log("Fin del ciclo for");
 
+// for (let contador = 0; contador <= 10; contador++){
+//     if(contador % 2 !== 0){//aqui preguntamos si el numero es impar y en el caso de serlo pues con el continue continuamos  
+//         continue; //con la siguiente iteración
+//     } 
+//         console.log(contador);
+    
+// }
+// console.log("Fin del ciclo for");
+
+//Etiquetas : el uso de etiquetas nos permite ir a una parte  de nuestro programa que deseemos
+inicio:
 for (let contador = 0; contador <= 10; contador++){
     if(contador % 2 !== 0){//aqui preguntamos si el numero es impar y en el caso de serlo pues con el continue continuamos  
-        continue; //con la siguiente iteración
+        continue inicio; //con la siguiente iteración
     } 
         console.log(contador);
     
