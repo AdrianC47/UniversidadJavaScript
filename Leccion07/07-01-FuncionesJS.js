@@ -13,3 +13,8 @@ function miFuncion(a,b){
 }
 let resultado = miFuncion(4,4);
 console.log(resultado);
+
+
+//Funciones de tipo expresión (no llevan nombre puesto que se asignan a una variable)
+let sumar = function(a,b){return a +b};
+console.log(sumar(8,5));
