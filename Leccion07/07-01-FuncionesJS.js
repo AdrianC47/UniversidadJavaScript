@@ -66,9 +66,25 @@ let x = 10;
 
 function cambiarValor(a){
     a = 20;
+    return a;
 }
 
-//Paso por valor
+// Paso por valor
 cambiarValor(x);//10
 console.log(x);
-console.log(a);
+//console.log(a);
+
+// Paso por referencia
+const persona ={
+    nombre:'Adrian',
+    apellido:'Perez'
+}
+
+function cambiarValorObjeto(p1){
+    p1.nombre = 'Isreal';
+    p1.apellido = 'Juarez';
+}
+
+//Paso por referencia 
+cambiarValorObjeto(persona);
+console.log(persona);
