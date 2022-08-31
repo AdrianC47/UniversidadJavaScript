@@ -22,3 +22,8 @@ console.log(autos);
 
 autos[6]= 'Porshe'; //no recomendable puesto que ocupa memoria
 console.log(autos);
+
+//Con esto pregunto si es un Array
+console.log(Array.isArray(autos));
+//esta es otra forma
+console.log(autos instanceof Array);
