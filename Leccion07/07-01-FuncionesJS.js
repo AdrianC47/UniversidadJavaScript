@@ -33,9 +33,18 @@ console.log(resultado);
 // console.log(miFuncionTexto);
 
 //Funciones de tipo expresión (no llevan nombre puesto que se asignan a una variable)
-let sumar = function(a,b){return a +b};
-console.log(sumar(8,5));  
+// let sumar = function(a,b){return a +b};
+// console.log(sumar(8,5));  
 
 // Funciones de Tipo Flecha
 const sumarFuncionTipoFlecha = (a,b)=> a+b;
 console.log(sumarFuncionTipoFlecha(8,6));
+
+//Parametros es (a,b) en una funcion en tanto que argumentoos es (2,3) en una funcion
+let sumar = function(a=4,b=5){
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+    console.log(arguments[2])
+    return a +b + arguments[2];
+};
+console.log(sumar(3,8,7));  
