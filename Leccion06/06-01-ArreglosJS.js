@@ -14,3 +14,11 @@ autos[1] = 'MercedesBenz';
 console.log(autos)
 autos.push('Toyota');
 console.log(autos);
+
+console.log(autos.length);
+autos[autos.length]='Mazda';
+
+console.log(autos);
+
+autos[6]= 'Porshe'; //no recomendable puesto que ocupa memoria
+console.log(autos);
