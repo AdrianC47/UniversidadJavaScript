@@ -20,7 +20,18 @@ let sumar = function(a,b){return a +b};
 console.log(sumar(8,5));
 
 //Funciones Self-Invoking (funciones que se llaman a sí mismas)
-(function (a,b){
-    console.log('Ejecutando la función: ' + (a+b));
-})(3,3)//Esta funcion no se puede reutilizar, no podemos volver a llamarle ya que no esta asignada a ninguna variable ni 
-       //tampoco se le esta asignando un nombre
+// (function (a,b){
+//     console.log('Ejecutando la función: ' + (a+b));
+// })(3,3)//Esta funcion no se puede reutilizar, no podemos volver a llamarle ya que no esta asignada a ninguna variable ni 
+//        //tampoco se le esta asignando un nombre
+
+
+// Una funcion es un tipo de dato sin embargo tambien puede ser descritas como objetos por ende tiene atributos y metodos
+console.log(typeof miFuncion);
+function miFuncion(a,b){
+    console.log(arguments.length); //aqui accedo a un atributo de mi funcion
+    return a+b; 
+}
+
+var miFuncionTexto = miFuncion.toString(); //aqui accedo a un metodo de mi funcion
+console.log(miFuncionTexto);
