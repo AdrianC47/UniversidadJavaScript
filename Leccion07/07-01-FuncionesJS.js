@@ -49,13 +49,26 @@
 // };
 // console.log(sumar(3,8,7));  
 
-let resultado = sumarTodo(5, 4, 13, 10, 25);
-console.log(resultado)
-function sumarTodo(){
-    let suma = 0;
-    for(let i =0; i <arguments.length; i++){
-        suma += arguments[i]; //suma = suma + arguments[i]
-    }
-    return suma;
+// let resultado = sumarTodo(5, 4, 13, 10, 25);
+// console.log(resultado)
+// function sumarTodo(){
+//     let suma = 0;
+//     for(let i =0; i <arguments.length; i++){
+//         suma += arguments[i]; //suma = suma + arguments[i]
+//     }
+//     return suma;
+// }
+// console.log(resultado);
+
+//Paso por Valor en Funciones
+// Tipos primitivos
+let x = 10;
+
+function cambiarValor(a){
+    a = 20;
 }
-console.log(resultado);
+
+//Paso por valor
+cambiarValor(x);//10
+console.log(x);
+console.log(a);
