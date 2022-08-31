@@ -18,3 +18,9 @@ console.log(resultado);
 //Funciones de tipo expresión (no llevan nombre puesto que se asignan a una variable)
 let sumar = function(a,b){return a +b};
 console.log(sumar(8,5));
+
+//Funciones Self-Invoking (funciones que se llaman a sí mismas)
+(function (a,b){
+    console.log('Ejecutando la función: ' + (a+b));
+})(3,3)//Esta funcion no se puede reutilizar, no podemos volver a llamarle ya que no esta asignada a ninguna variable ni 
+       //tampoco se le esta asignando un nombre
