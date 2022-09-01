@@ -195,6 +195,29 @@
 // console.log(persona1.nombreCompleto.call(persona2));
 
 // Paso de Argumentos a Call en JavaScript
+// let persona1 = {
+//     nombre:'Juan',
+//     apellido:'Perez',
+//     nombreCompleto: function(titulo, telf){
+//         return titulo + ': ' +this.nombre + ' '+ this.apellido + ' '+ telf;
+//     }
+// }
+
+// let persona2 = {
+//     nombre:'Carlos',
+//     apellido:'Lara'
+// }
+
+// //Uso de call para usar 
+// //el metodo persona1.nombreCompleto con los datos del objeto persona2
+// console.log(persona1.nombreCompleto("Arq","582421"));
+
+// console.log(persona1.nombreCompleto.call(persona2,'Ing en Computacion','98242'));
+
+// Método Apply en JavaScript
+// El método apply nos permitirá de igual forma llamar a un metodo de  otro objeto, sin embargo existe una
+// diferencia al momento de pasar los parametros la que consiste en pasarlos por medio de un arreglo
+
 let persona1 = {
     nombre:'Juan',
     apellido:'Perez',
@@ -208,8 +231,8 @@ let persona2 = {
     apellido:'Lara'
 }
 
-//Uso de call para usar 
-//el metodo persona1.nombreCompleto con los datos del objeto persona2
-console.log(persona1.nombreCompleto("Arq","582421"));
-
-console.log(persona1.nombreCompleto.call(persona2,'Ing en Computacion','98242'));
+//Uso de metodo apply para usar
+//El metodo persona1.nombreCompleto con los datos de la persona2
+console.log(persona1.nombreCompleto("Lic", '456'));
+let  arreglo = ['Ing','55443322'];
+console.log(persona1.nombreCompleto.apply(persona2,arreglo));
