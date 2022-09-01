@@ -14,3 +14,14 @@ let persona ={
 console.log(persona.email);
 console.log(persona);
 console.log(persona.nombreCompleto());
+
+//Segunda Forma de crear un objeto
+
+let persona2 = new Object();
+persona2.nombre = 'Carlos';
+persona2.apellido ='Sanchez';
+persona2.direccion = 'Calle Vieja';
+persona2.telf='789';
+
+console.log(persona2.nombre)
+console.log(persona2)
