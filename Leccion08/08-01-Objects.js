@@ -175,11 +175,31 @@
 
 // Uso de Call en JavaScript
 // El metodo call nos va a permitir llamar un metodo que esta definido en un objeto desde otro objeto
+// let persona1 = {
+//     nombre:'Juan',
+//     apellido:'Perez',
+//     nombreCompleto: function(){
+//         return this.nombre + ' '+ this.apellido;
+//     }
+// }
+
+// let persona2 = {
+//     nombre:'Carlos',
+//     apellido:'Lara'
+// }
+
+// //Uso de call para usar 
+// //el metodo persona1.nombreCompleto con los datos del objeto persona2
+// console.log(persona1.nombreCompleto());
+
+// console.log(persona1.nombreCompleto.call(persona2));
+
+// Paso de Argumentos a Call en JavaScript
 let persona1 = {
     nombre:'Juan',
     apellido:'Perez',
-    nombreCompleto: function(){
-        return this.nombre + ' '+ this.apellido;
+    nombreCompleto: function(titulo, telf){
+        return titulo + ': ' +this.nombre + ' '+ this.apellido + ' '+ telf;
     }
 }
 
@@ -190,6 +210,6 @@ let persona2 = {
 
 //Uso de call para usar 
 //el metodo persona1.nombreCompleto con los datos del objeto persona2
-console.log(persona1.nombreCompleto());
+console.log(persona1.nombreCompleto("Arq","582421"));
 
-console.log(persona1.nombreCompleto.call(persona2));
+console.log(persona1.nombreCompleto.call(persona2,'Ing en Computacion','98242'));
