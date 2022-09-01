@@ -81,25 +81,43 @@
 
 // Método Get  y SET en objetos  de JS
 
-let persona ={
-    nombre:'Adrian',
-    apellido: 'Perez',
-    email:'aperez@gmail.com',
-    edad:27,
-    idioma:'es',
-    get lang(){
-        return this.idioma.toUpperCase();
-    },
-    set lang( lang ){
-        this.idioma = lang.toUpperCase();
-    },
-    get nombreCompleto(){
-        return this.nombre + ' ' +this.apellido; //la palabra this es una variable que apunta al objeto
-    }
-}
-console.log(persona.lang);
-// Al poner el get ya no va el function y ya no van los parentesis cuando se llama a la funcion ya que JS entiende que se va a obtener información
+// let persona ={
+//     nombre:'Adrian',
+//     apellido: 'Perez',
+//     email:'aperez@gmail.com',
+//     edad:27,
+//     idioma:'es',
+//     get lang(){
+//         return this.idioma.toUpperCase();
+//     },
+//     set lang( lang ){
+//         this.idioma = lang.toUpperCase();
+//     },
+//     get nombreCompleto(){
+//         return this.nombre + ' ' +this.apellido; //la palabra this es una variable que apunta al objeto
+//     }
+// }
+// console.log(persona.lang);
+// // Al poner el get ya no va el function y ya no van los parentesis cuando se llama a la funcion ya que JS entiende que se va a obtener información
 
-persona.lang = 'us';
-console.log(persona.lang);
-console.log(persona.idioma); //aqui se comprueba que se hizo el seteo
+// persona.lang = 'us';
+// console.log(persona.lang);
+// console.log(persona.idioma); //aqui se comprueba que se hizo el seteo
+
+// Método Constructor de Objetos en JavaScript
+// se recomienda que los metodos que van a ser constructores de objetos empiecen con mayuscula
+//Funcion constructor de objetos de tipo Persona
+function Persona(nombre1 = 'Antonio',apellido1 ='Bermeo',email1='anber@unae.edu.ec'){
+    this.nombre = nombre1;
+    this.apellido = apellido1;
+    this.email= email1;
+}
+
+let padre = new Persona("Adrian","Cash","adrycash@sixty.com");
+console.log(padre);
+
+let madre = new Persona('Roxxette',"Ness","listenheart@.com");
+console.log(madre);
+
+padre.nombre = 'Luis';
+console.log(padre);
