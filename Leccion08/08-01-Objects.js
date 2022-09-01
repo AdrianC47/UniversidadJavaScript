@@ -79,16 +79,27 @@
 // let personaString = JSON.stringify(persona);
 // console.log(personaString); 
 
-// Método Get en objetos en de JS
+// Método Get  y SET en objetos  de JS
 
 let persona ={
     nombre:'Adrian',
     apellido: 'Perez',
     email:'aperez@gmail.com',
     edad:27,
+    idioma:'es',
+    get lang(){
+        return this.idioma.toUpperCase();
+    },
+    set lang( lang ){
+        this.idioma = lang.toUpperCase();
+    },
     get nombreCompleto(){
         return this.nombre + ' ' +this.apellido; //la palabra this es una variable que apunta al objeto
     }
 }
-console.log(persona.nombreCompleto)
+console.log(persona.lang);
 // Al poner el get ya no va el function y ya no van los parentesis cuando se llama a la funcion ya que JS entiende que se va a obtener información
+
+persona.lang = 'us';
+console.log(persona.lang);
+console.log(persona.idioma); //aqui se comprueba que se hizo el seteo
