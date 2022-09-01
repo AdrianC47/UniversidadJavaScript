@@ -150,25 +150,46 @@
 //Uso de Prototype en JavaScript
 //Si se requiere agregar un nuevo atributo al  constructor sin necesidad de modificar el constructor se hace lo siguiente
 //se usa la propiedad de prototype
-function Persona(nombre1 = 'Antonio',apellido1 ='Bermeo',email1='anber@unae.edu.ec'){
-    this.nombre = nombre1;
-    this.apellido = apellido1;
-    this.email= email1;
-    this.nombreCompleto = function(){
-        return this.nombre + ' ' + this.apellido;
+// function Persona(nombre1 = 'Antonio',apellido1 ='Bermeo',email1='anber@unae.edu.ec'){
+//     this.nombre = nombre1;
+//     this.apellido = apellido1;
+//     this.email= email1;
+//     this.nombreCompleto = function(){
+//         return this.nombre + ' ' + this.apellido;
+//     }
+// }
+
+// Persona.prototype.telefono ='68';
+
+// let padre = new Persona("Adrian","Cash","adrycash@sixty.com");
+// console.log(padre);
+// console.log(padre.nombreCompleto());
+// padre.telefono='11223344';
+// console.log(padre.telefono);
+
+// let madre = new Persona('Roxxette',"Ness","listenheart@.com");
+// console.log(madre);
+// console.log(madre.nombreCompleto());
+// madre.telefono= '5555';
+// console.log(madre.telefono);
+
+// Uso de Call en JavaScript
+// El metodo call nos va a permitir llamar un metodo que esta definido en un objeto desde otro objeto
+let persona1 = {
+    nombre:'Juan',
+    apellido:'Perez',
+    nombreCompleto: function(){
+        return this.nombre + ' '+ this.apellido;
     }
 }
 
-Persona.prototype.telefono ='68';
+let persona2 = {
+    nombre:'Carlos',
+    apellido:'Lara'
+}
 
-let padre = new Persona("Adrian","Cash","adrycash@sixty.com");
-console.log(padre);
-console.log(padre.nombreCompleto());
-padre.telefono='11223344';
-console.log(padre.telefono);
+//Uso de call para usar 
+//el metodo persona1.nombreCompleto con los datos del objeto persona2
+console.log(persona1.nombreCompleto());
 
-let madre = new Persona('Roxxette',"Ness","listenheart@.com");
-console.log(madre);
-console.log(madre.nombreCompleto());
-madre.telefono= '5555';
-console.log(madre.telefono);
+console.log(persona1.nombreCompleto.call(persona2));
