@@ -59,3 +59,22 @@ console.log(persona);
 
 delete persona.telefono;
 console.log(persona);
+
+// Formas de imprimir un objeto
+console.log(persona);
+
+// Concatenar  cada valor de cada propiedad
+console.log(persona.nombre + ','+ persona.apellido);
+
+//Iterar cada unas de las propiedades utilizando For in
+for ( nombrePropiedad in persona){
+    console.log(persona[nombrePropiedad]);
+}
+
+//Utilizando la sintaxis de Object
+let personaArray = Object.values(persona);
+console.log(personaArray);
+
+//Utilizar el metodo JSON.stringify
+let personaString = JSON.stringify(persona);
+console.log(personaString); 
