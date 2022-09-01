@@ -111,13 +111,19 @@ function Persona(nombre1 = 'Antonio',apellido1 ='Bermeo',email1='anber@unae.edu.
     this.nombre = nombre1;
     this.apellido = apellido1;
     this.email= email1;
+    this.nombreCompleto = function(){
+        return this.nombre + ' ' + this.apellido;
+    }
 }
 
 let padre = new Persona("Adrian","Cash","adrycash@sixty.com");
 console.log(padre);
+console.log(padre.nombreCompleto());
 
 let madre = new Persona('Roxxette',"Ness","listenheart@.com");
 console.log(madre);
+console.log(madre.nombreCompleto());
 
 padre.nombre = 'Luis';
 console.log(padre);
+console.log(padre.nombreCompleto());
