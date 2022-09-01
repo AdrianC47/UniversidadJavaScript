@@ -107,6 +107,49 @@
 // Método Constructor de Objetos en JavaScript
 // se recomienda que los metodos que van a ser constructores de objetos empiecen con mayuscula
 //Funcion constructor de objetos de tipo Persona
+// function Persona(nombre1 = 'Antonio',apellido1 ='Bermeo',email1='anber@unae.edu.ec'){
+//     this.nombre = nombre1;
+//     this.apellido = apellido1;
+//     this.email= email1;
+//     this.nombreCompleto = function(){
+//         return this.nombre + ' ' + this.apellido;
+//     }
+// }
+
+// let padre = new Persona("Adrian","Cash","adrycash@sixty.com");
+// console.log(padre);
+// console.log(padre.nombreCompleto());
+
+// let madre = new Persona('Roxxette',"Ness","listenheart@.com");
+// console.log(madre);
+// console.log(madre.nombreCompleto());
+
+// padre.nombre = 'Luis';
+// console.log(padre);
+// console.log(padre.nombreCompleto());
+
+//Distintas Formas de Crear Objetos en JavaScript
+// let miObjeto = new Object();
+// let miObjeto2 = {};
+
+// let miCadena1 = new String('HOLA');
+// let miCadena2 = ('ADIOS');
+
+// let miNumero = new Number(1);
+// let miNumero2 = 4;
+
+// let miBoolean = new Boolean(true);
+// let miBoolean2 = false;
+
+// let miArreglo1 = new Array();
+// let miArreglo2 =[];
+
+// let miFuncion = new Function();
+// let miFuncion2 = function(){};
+
+//Uso de Prototype en JavaScript
+//Si se requiere agregar un nuevo atributo al  constructor sin necesidad de modificar el constructor se hace lo siguiente
+//se usa la propiedad de prototype
 function Persona(nombre1 = 'Antonio',apellido1 ='Bermeo',email1='anber@unae.edu.ec'){
     this.nombre = nombre1;
     this.apellido = apellido1;
@@ -116,33 +159,16 @@ function Persona(nombre1 = 'Antonio',apellido1 ='Bermeo',email1='anber@unae.edu.
     }
 }
 
+Persona.prototype.telefono ='68';
+
 let padre = new Persona("Adrian","Cash","adrycash@sixty.com");
 console.log(padre);
 console.log(padre.nombreCompleto());
+padre.telefono='11223344';
+console.log(padre.telefono);
 
 let madre = new Persona('Roxxette',"Ness","listenheart@.com");
 console.log(madre);
 console.log(madre.nombreCompleto());
-
-padre.nombre = 'Luis';
-console.log(padre);
-console.log(padre.nombreCompleto());
-
-//Distintas Formas de Crear Objetos en JavaScript
-let miObjeto = new Object();
-let miObjeto2 = {};
-
-let miCadena1 = new String('HOLA');
-let miCadena2 = ('ADIOS');
-
-let miNumero = new Number(1);
-let miNumero2 = 4;
-
-let miBoolean = new Boolean(true);
-let miBoolean2 = false;
-
-let miArreglo1 = new Array();
-let miArreglo2 =[];
-
-let miFuncion = new Function();
-let miFuncion2 = function(){};
+madre.telefono= '5555';
+console.log(madre.telefono);
