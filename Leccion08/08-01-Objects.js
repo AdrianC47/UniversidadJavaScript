@@ -48,3 +48,14 @@ for (nombrepropiedad in persona) {
     console.log(nombrepropiedad);
     console.log(persona[nombrepropiedad]);
 }
+
+
+//Agregar y eliminar propiedades a un objeto
+
+persona.telefono ='456'; //simplemente se pone .nuevaPropiedad y se da el valor
+console.log(persona);
+
+//Para borrar usamos el delete
+
+delete persona.telefono;
+console.log(persona);
