@@ -9,17 +9,16 @@ ser usadas, es decir no usa hoisting que sí se usa en funciones
 class Persona{
     //Para definir atributos estaticos solo se antepone la palabra static (pertenece a la Clase y no al objeto)
     
-    static contadorObjetosPersona = 0;//Atributo de nuestra clase
+    static contadorPersonas = 0;//Atributo de nuestra clase
     
-    email = "Valor default email";//Atributo  de nuestros objetos
+
 
     constructor(nombre,apellido){
         this._nombre=nombre; //en ese momento con el this.nombre se crea el atributo nombre 
         this._apellido=apellido; //se acostumbra a poner el _ debido a que el metodo GET no puede llevar el mismo nombre que el atributo
         
         // Para poner en practica los atributos estaticos lo que se hace es que cuente cada instancia creada de la clase Persona , lo cual se lo hace en el constructor
-        Persona.contadorObjetosPersona++; 
-        console.log('Se incrementa contador:' +Persona.contadorObjetosPersona);
+        this.idPersona = ++Persona.contadorPersonas; 
     }
     get nombre(){
         return this._nombre;
@@ -38,7 +37,7 @@ class Persona{
     }
 
     nombreCompleto(){
-        return this._nombre + ' '+ this.apellido;
+        return this.idPersona +' '+ this._nombre + ' '+ this.apellido;
     }
 
     //Sobreescribiendo  el metodo de la clase Padre (Object)
@@ -58,22 +57,7 @@ class Persona{
     }
 }
 
-//Si no se define un constructor, JavaScript agrega uno vacío en automático
-let persona1  = new Persona("Bob","Dylan"); 
 
-console.log(persona1.nombre); //GET
-
-persona1._nombre="Jhonny";//SET
-
-console.log(persona1);
-
-
-
-let persona2 = new Persona("John", 'Lennon');
-console.log(persona2);
-
-let persona3 = new Persona('Karla', 'Juárez'); 
-console.log(persona3);
 
 
 // Herencia en JavaScript
@@ -97,29 +81,52 @@ class Empleado extends Persona{
 
 }
 
+//Si no se define un constructor, JavaScript agrega uno vacío en automático
+let persona1  = new Persona("Bob","Dylan"); 
+
+console.log(persona1.nombre); //GET
+
+persona1._nombre="Jhonny";//SET
+
 console.log(persona1);
-console.log(persona1.toString());
+
+
+
+let persona2 = new Persona("John", 'Lennon');
+console.log(persona2);
+
+let persona3 = new Persona('Karla', 'Juárez'); 
+console.log(persona3);
+
+// console.log(persona1);
+// console.log(persona1.toString());
 
 let empleado1 = new Empleado("Priscila","Aguilar","Grupo de Investigacion");
-console.log(empleado1);
-console.log(empleado1.nombre);
-console.log(empleado1.nombreCompleto());
-console.log(empleado1.toString());
+// console.log(empleado1);
+// console.log(empleado1.nombre);
+// console.log(empleado1.nombreCompleto());
+// console.log(empleado1.toString());
 
 
 //console.log(persona1.saludar()); No es posible llamar un metodo static desde un objeto
-Persona.saludar();
-Empleado.saludar();
+// Persona.saludar();
+// Empleado.saludar();
  
-Persona.saludar2(empleado1);
-Empleado.saludar2(persona1);
+// Persona.saludar2(empleado1);
+// Empleado.saludar2(persona1);
 
-console.log(Persona.contadorObjetosPersona);  //accediendo al atributo de la Clase
-console.log(persona1.contadorObjetosPersona); 
-console.log(Empleado.contadorObjetosPersona); 
+// console.log(Persona.contadorObjetosPersona);  //accediendo al atributo de la Clase
+// console.log(persona1.contadorObjetosPersona); 
+// console.log(Empleado.contadorObjetosPersona); 
 
+// Ejemplo de uso de la palabra Static en JavaScript
+console.log(persona1.toString());
+console.log(persona2.toString());
+console.log(persona3.toString());
 
-console.log(persona1.email);
-console.log(empleado1.email);
-console.log(Persona.email);//No se  puede debido a que este atributo no es estatico sino del objeto
-console.log(Empleado.email);
+console.log(empleado1.toString());
+
+console.log(Persona.contadorPersonas);
+let persona4 = new Persona('Stalin', 'Rojas');
+console.log(persona4.toString()); 
+ 
