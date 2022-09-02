@@ -11,14 +11,24 @@ class Persona{
     
     static contadorPersonas = 0;//Atributo de nuestra clase
     
-
+    //que hacemos si queremos hacer una constante estatica? pues hacemos un metodo estatico
+    static get MAX_OBJ(){ //que simule una constante 
+        return 5;
+    }
 
     constructor(nombre,apellido){
         this._nombre=nombre; //en ese momento con el this.nombre se crea el atributo nombre 
         this._apellido=apellido; //se acostumbra a poner el _ debido a que el metodo GET no puede llevar el mismo nombre que el atributo
-        
+
+        if (Persona.contadorPersonas < Persona.MAX_OBJ){
+
+            this.idPersona = ++Persona.contadorPersonas; 
+        } else{
+            console.log("Se han superado el maximo de objetos permitidos")
+        }
+
         // Para poner en practica los atributos estaticos lo que se hace es que cuente cada instancia creada de la clase Persona , lo cual se lo hace en el constructor
-        this.idPersona = ++Persona.contadorPersonas; 
+  
     }
     get nombre(){
         return this._nombre;
@@ -129,4 +139,8 @@ console.log(empleado1.toString());
 console.log(Persona.contadorPersonas);
 let persona4 = new Persona('Stalin', 'Rojas');
 console.log(persona4.toString()); 
- 
+console.log(Persona.MAX_OBJ);
+Persona.MAX_OBJ = 10;
+console.log(Persona.MAX_OBJ); 
+let persona5 = new Persona('pepe', 'jara');
+console.log(persona5.toString()); 
