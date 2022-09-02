@@ -20,6 +20,14 @@ class Persona{
         this._nombre = nombre;
     }
 
+    get apellido(){
+        return this._apellido;
+    }
+
+    set apellido(apellido){
+        this._apellido = apellido;
+    }
+
 }
 
 //Si no se define un constructor, JavaScript agrega uno vacío en automático
@@ -38,3 +46,25 @@ console.log(persona2);
 
 let persona3 = new Persona('Karla', 'Juárez'); 
 console.log(persona3);
+
+
+// Herencia en JavaScript
+class Empleado extends Persona{
+    constructor(nombre, apellido, departamento){
+        super(nombre, apellido)//Llamo al constructor de la clase Padre
+        this._departamento = departamento;
+    }
+
+    get departamento (){
+        return this._departamento;
+    }
+    set departamento(departamento){
+        this._departamento = departamento;
+    }
+}
+
+console.log(persona1);
+
+let empleado1 = new Empleado("Priscila","Aguilar","Grupo de Investigacion");
+console.log(empleado1);
+console.log(empleado1.nombre);
