@@ -8,9 +8,16 @@ ser usadas, es decir no usa hoisting que sí se usa en funciones
 // let persona2 = new Persona('Karla', 'Juárez'); No es posible crear objetos antes de declarar la clase
 
 class Persona{
+
+    static contadorObjetosPersona = 0; //Para definir atributos estaticos solo se antepone la palabra static (pertenece a la Clase y no al objeto)
+    
     constructor(nombre,apellido){
         this._nombre=nombre; //en ese momento con el this.nombre se crea el atributo nombre 
         this._apellido=apellido; //se acostumbra a poner el _ debido a que el metodo GET no puede llevar el mismo nombre que el atributo
+        
+        // Para poner en practica los atributos estaticos lo que se hace es que cuente cada instancia creada de la clase Persona , lo cual se lo hace en el constructor
+        Persona.contadorObjetosPersona++; 
+        console.log('Se incrementa contador:' +Persona.contadorObjetosPersona);
     }
     get nombre(){
         return this._nombre;
@@ -39,7 +46,7 @@ class Persona{
         return this.nombreCompleto();
     }
 
-    //Se pueden crear metodos que se asocien exclusivamente con una  clase, para ello hacemos uso de static
+    //Se pueden crear metodos que se asocien exclusivamente con una  clase (No con una instancia (objeto)), para ello hacemos uso de static
     static saludar(){
         console.log('Hello Friend');
     }
@@ -104,3 +111,7 @@ Empleado.saludar();
  
 Persona.saludar2(empleado1);
 Empleado.saludar2(persona1);
+
+console.log(Persona.contadorObjetosPersona);  //accediendo al atributo de la Clase
+console.log(persona1.contadorObjetosPersona); 
+console.log(Empleado.contadorObjetosPersona); 
