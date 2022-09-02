@@ -38,6 +38,15 @@ class Persona{
         // El metodo que  se ejecuta depende si es una referencia de tipo Padre o de tipo Hijo
         return this.nombreCompleto();
     }
+
+    //Se pueden crear metodos que se asocien exclusivamente con una  clase, para ello hacemos uso de static
+    static saludar(){
+        console.log('Hello Friend');
+    }
+
+    static saludar2(persona){
+        console.log(persona.nombre+ ' ' + 'saludar 2 ');
+    }
 }
 
 //Si no se define un constructor, JavaScript agrega uno vacío en automático
@@ -87,3 +96,11 @@ console.log(empleado1);
 console.log(empleado1.nombre);
 console.log(empleado1.nombreCompleto());
 console.log(empleado1.toString());
+
+
+//console.log(persona1.saludar()); No es posible llamar un metodo static desde un objeto
+Persona.saludar();
+Empleado.saludar();
+ 
+Persona.saludar2(empleado1);
+Empleado.saludar2(persona1);
