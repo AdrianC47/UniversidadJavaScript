@@ -7,9 +7,12 @@ ser usadas, es decir no usa hoisting que sí se usa en funciones
 // let persona2 = new Persona('Karla', 'Juárez'); No es posible crear objetos antes de declarar la clase
 
 class Persona{
-
-    static contadorObjetosPersona = 0; //Para definir atributos estaticos solo se antepone la palabra static (pertenece a la Clase y no al objeto)
+    //Para definir atributos estaticos solo se antepone la palabra static (pertenece a la Clase y no al objeto)
     
+    static contadorObjetosPersona = 0;//Atributo de nuestra clase
+    
+    email = "Valor default email";//Atributo  de nuestros objetos
+
     constructor(nombre,apellido){
         this._nombre=nombre; //en ese momento con el this.nombre se crea el atributo nombre 
         this._apellido=apellido; //se acostumbra a poner el _ debido a que el metodo GET no puede llevar el mismo nombre que el atributo
@@ -114,3 +117,9 @@ Empleado.saludar2(persona1);
 console.log(Persona.contadorObjetosPersona);  //accediendo al atributo de la Clase
 console.log(persona1.contadorObjetosPersona); 
 console.log(Empleado.contadorObjetosPersona); 
+
+
+console.log(persona1.email);
+console.log(empleado1.email);
+console.log(Persona.email);//No se  puede debido a que este atributo no es estatico sino del objeto
+console.log(Empleado.email);
