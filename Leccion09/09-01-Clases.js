@@ -65,6 +65,11 @@ class Empleado extends Persona{
         this._departamento = departamento;
     }
 
+    //Sobreescritura en JavaScript 
+    nombreCompleto(){ //<= debe ser el mismo nombre
+        return super.nombreCompleto() + '  en el dpto de ' + this._departamento; //con el super llamo al metodo y sobreescribo el mismo
+    }
+
 }
 
 console.log(persona1);
