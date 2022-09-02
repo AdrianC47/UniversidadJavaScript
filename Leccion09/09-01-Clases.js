@@ -31,6 +31,13 @@ class Persona{
     nombreCompleto(){
         return this._nombre + ' '+ this.apellido;
     }
+
+    //Sobreescribiendo  el metodo de la clase Padre (Object)
+    toString(){
+        // Se aplica polimorfismo (multiples formas en tiempo de ejecucion)
+        // El metodo que  se ejecuta depende si es una referencia de tipo Padre o de tipo Hijo
+        return this.nombreCompleto();
+    }
 }
 
 //Si no se define un constructor, JavaScript agrega uno vacío en automático
@@ -73,8 +80,10 @@ class Empleado extends Persona{
 }
 
 console.log(persona1);
+console.log(persona1.toString());
 
 let empleado1 = new Empleado("Priscila","Aguilar","Grupo de Investigacion");
 console.log(empleado1);
 console.log(empleado1.nombre);
 console.log(empleado1.nombreCompleto());
+console.log(empleado1.toString());
