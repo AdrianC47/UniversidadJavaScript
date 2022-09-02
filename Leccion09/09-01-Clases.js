@@ -28,6 +28,9 @@ class Persona{
         this._apellido = apellido;
     }
 
+    nombreCompleto(){
+        return this._nombre + ' '+ this.apellido;
+    }
 }
 
 //Si no se define un constructor, JavaScript agrega uno vacío en automático
@@ -55,12 +58,13 @@ class Empleado extends Persona{
         this._departamento = departamento;
     }
 
-    get departamento (){
+    get departamento (){ //Get y Set de atributo propio de la clase Hija
         return this._departamento;
     }
     set departamento(departamento){
         this._departamento = departamento;
     }
+
 }
 
 console.log(persona1);
@@ -68,3 +72,4 @@ console.log(persona1);
 let empleado1 = new Empleado("Priscila","Aguilar","Grupo de Investigacion");
 console.log(empleado1);
 console.log(empleado1.nombre);
+console.log(empleado1.nombreCompleto());
