@@ -37,19 +37,7 @@ class Persona {
     }
 
     toString(){
-        return `
-                ${this.idPersona}
-                ${this.nombre}
-                ${this.apellido}
-                ${this.edad}` ;
+        return `${this.idPersona} ${this.nombre} ${this.apellido} ${this.edad}` ;
     }
 }
-
-
-
-
-
-
-class Cliente extends Persona{
-
-}
+ 
