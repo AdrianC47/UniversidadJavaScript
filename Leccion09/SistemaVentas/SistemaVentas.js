@@ -39,7 +39,7 @@ class Orden {
     constructor(){
         this.idOrden = ++Orden.contadorOrdenes;
         this.productos = [];
-        this.contadorProductosAgregados  = 0; 
+        // this.contadorProductosAgregados  = 0; 
     }
 
     get getIdOrden (){
@@ -60,20 +60,39 @@ class Orden {
         for (let producto of this.productos) {
             totalVenta += producto.precio; // totalventa = totalventa + producto.precio;
         }
-        console.log("El total de la venta es de " + totalVenta);
+   
         return totalVenta
     }
 
     mostrarOrden(){
         let productosOrden = '';
         for (let producto of this.productos) {
-            productosOrden += producto.toString() + ' ';
+            productosOrden += '\n{'+ producto.toString() + '} ';
         }
-        console.log(`Orden: ${this.idOrden} Total: ${this.calcularTotal()}, Productos:  ${this.productosOrden}`)
+        console.log(`Orden: ${this.idOrden} Total: $${this.calcularTotal()}, Productos:  ${productosOrden}`)
     }
 }
 
-// let producto1 = new Producto("Botella", 200);
-// let producto2 = new Producto("Esfero", 50);
+let producto1 = new Producto("Botella", 200);
+let producto2 = new Producto("Esfero", 50);
+let producto3 = new Producto("Guitarra", 530);
+
+let orden1 = new Orden();
+orden1.agregarProducto(producto1);
+orden1.agregarProducto(producto2);
+orden1.agregarProducto(producto3);
+orden1.agregarProducto(producto1);
+
+
+
+let orden2 = new Orden();
+orden2.agregarProducto(producto3);
+orden2.agregarProducto(producto3);
+orden2.agregarProducto(producto2);
+orden2.agregarProducto(producto2);
+orden2.agregarProducto(producto2);
+orden2.agregarProducto(producto1);
+orden1.mostrarOrden();
+orden2.mostrarOrden();
 // console.log(producto1.toString());
 // console.log(producto2.toString());
