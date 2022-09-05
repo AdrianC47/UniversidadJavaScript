@@ -1,12 +1,12 @@
 class Persona {
     static contadorPersonas = 0;
 
-    constructor(idPersona, nombre, apellido, edad){
+    constructor( nombre, apellido, edad){
         this.nombre= nombre;
         this.apellido = apellido;
         this.edad = edad
-        // this.idPersona = ++Persona.contadorPersonas;
-        this.idPersona = idPersona;
+        this.idPersona = ++Persona.contadorPersonas;
+        // this.idPersona = idPersona;
     }
 
     get getIdPersona(){
@@ -46,9 +46,9 @@ class Persona {
 }
 
 
-class Empleado extends Persona{
 
-}
+
+
 
 class Cliente extends Persona{
 
