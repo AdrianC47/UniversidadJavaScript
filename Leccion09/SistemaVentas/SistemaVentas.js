@@ -30,6 +30,18 @@ class Producto{
     }
 }
 
+class Orden {
+    static contadorOrdenes = 0;
+    static get MAX_PRODUCTOS(){
+        return 5;
+    }
+
+    constructor(){
+        this.idOrden = ++Orden.contadorOrdenes;
+        this.productos = [];
+        this.contadorProductosAgregados  = 0; 
+    }
+}
 
 let producto1 = new Producto("Botella", 200);
 let producto2 = new Producto("Esfero", 50);
