@@ -114,7 +114,7 @@ console.log(monitor2.toString());
 class Computadora {
     static contadorComputadores = 0;
     constructor(nombre,monitor, teclado,raton){
-        this.idComputadora = ++contadorComputadores;
+        this.idComputadora = ++Computadora.contadorComputadores;
         this.nombre = nombre;
         this.monitor = monitor;
         this.teclado = teclado;
@@ -155,9 +155,15 @@ class Computadora {
     }
 
     toString(){
-        return `${this.idComputadora} ${this.nombre} ${this.monitor} ${this.teclado} ${this.raton}`
+        return `Computadora: ${this.idComputadora}: ${this.nombre} \n ${this.monitor} \n ${this.raton} \n ${this.teclado} `;
     }
 }
+
+let computadora1 = new Computadora("HP", monitor1, raton1, teclado1);
+console.log(`${computadora1}`)
+
+let computadora2 = new Computadora("Armada", monitor2, raton2, teclado2);
+console.log(computadora2.toString());
 
 class Orden {
     static contadorOrdenes = 0;
