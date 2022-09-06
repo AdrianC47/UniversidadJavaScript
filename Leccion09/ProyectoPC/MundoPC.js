@@ -168,7 +168,29 @@ console.log(computadora2.toString());
 class Orden {
     static contadorOrdenes = 0;
     constructor(){
-        this.idOrden = ++contadorOrdenes;
-       
+        this.idOrden = ++Orden.contadorOrdenes;
+        this.computadoras = [];
+    }
+
+    get getIdOrden(){
+        return this.idOrden;
+    }
+    agregarComputadoras(computadora){
+        this.computadoras.push(computadora);
+    }
+
+    mostrarOrden(){
+        let computadorasOrden = ' ';
+        for (let computadora  of this.computadoras) {
+            computadorasOrden += `\n${computadora}`;
+        }
+
+        console.log(`Orden: ${this.idOrden}, Computadoras: ${computadorasOrden}`);
     }
 }
+
+let orden1 = new Orden();
+orden1.agregarComputadoras(computadora1);
+orden1.agregarComputadoras(computadora1);
+orden1.agregarComputadoras(computadora2);
+orden1.mostrarOrden();
