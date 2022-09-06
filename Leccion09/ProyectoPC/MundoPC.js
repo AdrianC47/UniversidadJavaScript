@@ -79,7 +79,7 @@ class Monitor {
     constructor(marca, tamanio){
         this.marca =marca;
         this.tamanio = tamanio;
-        this.idMonitor = ++contadorMonitores;
+        this.idMonitor = ++Monitor.contadorMonitores;
     }
 
     get getIdMonitor(){
@@ -101,9 +101,15 @@ class Monitor {
     }
 
     toString(){
-        return `${this.idMonitor} ${this.marca} ${this.tamanio} `;
+        return `Monitor: [idMonitor: ${this.idMonitor},  marca: ${this.marca}, tamaño: ${this.tamanio} ] `;
     }
 }
+
+let monitor1 = new Monitor("LG","1000");
+let monitor2 = new Monitor("Dell", 27);
+console.log(monitor1.toString());
+console.log(monitor2.toString());
+
 
 class Computadora {
     static contadorComputadores = 0;
