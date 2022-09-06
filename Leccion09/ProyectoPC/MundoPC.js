@@ -48,6 +48,7 @@ let raton2 = new Raton("Bluetooth", "Dell");
 raton2.marca = "Apple";
 console.log(raton2.toString());
 
+
 class Teclado extends DispositivoEntrada{
     static contadorTeclados = 0;
 
@@ -62,10 +63,16 @@ class Teclado extends DispositivoEntrada{
     }
 
     toString(){
-        return `${super.toString()} ${this.idTeclado}`  ;
+        return `Teclado: [idTeclado: ${this.idTeclado}, tipoEntrada: ${this.tipoEntrada}, marca: ${this.marca} ] `;
     }
 
 }
+
+let teclado1 = new Teclado("Bluetooth", "MSI");
+let teclado2 = new Teclado("USB", "ACER");
+console.log(teclado1.toString());
+teclado2.marca = "Apple";
+console.log(teclado2.toString());
 
 class Monitor {
     static contadorMonitores = 0;
