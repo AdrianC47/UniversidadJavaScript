@@ -9,17 +9,33 @@ Cuando se ha resuelto correctamente se usa el then() y si se ha tenido un error 
 
 //El Promise tiene 2 parametros los cuales son funciones de tipo callback
 
-let miPromesa = new Promise((resolver, rechazar)=>{
-    let expresion = true;
-    if(expresion)
-        resolver('Resuelto correctamente');
-    else
-        rechazar('Se produjo un error');
-    }); 
+// let miPromesa = new Promise((resolver, rechazar)=>{
+//     let expresion = true;
+//     if(expresion)
+//         resolver('Resuelto correctamente');
+//     else
+//         rechazar('Se produjo un error');
+//     }); 
 
-//Para mandarla a llamar se usa el then
-                //estos son argumentos (funciones de tipo flecha)
-//miPromesa.then(valor => console.log(valor),error => console.log(error));
-miPromesa
-.then(valor =>console.log(valor))
-.catch(error=>console.log(error));
+// //Para mandarla a llamar se usa el then
+//                 //estos son argumentos (funciones de tipo flecha)
+// //miPromesa.then(valor => console.log(valor),error => console.log(error));
+// miPromesa
+// .then(
+//     valor =>console.log(valor)
+// )
+// .catch(error=>console.log(error));
+
+
+/*
+Funcion setTimeout y Promesas en JavaScript
+*/
+
+let miPromesa = new Promise((resolver)=>{
+    console.log("Inicio promesa");
+    setTimeout(()=>resolver('Saludos con promesa y Timeout'),3000);
+    console.log("Fin promesa");
+});
+
+miPromesa.then(valor=>console.log(valor));
+    
