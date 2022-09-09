@@ -9,22 +9,36 @@ Cuando se ha resuelto correctamente se usa el then() y si se ha tenido un error 
 
 //El Promise tiene 2 parametros los cuales son funciones de tipo callback
 
-// let miPromesa = new Promise((resolver, rechazar)=>{
-//     let expresion = true;
-//     if(expresion)//esta es la condicion
-//         resolver('Resuelto correctamente');
-//     else
-//         rechazar('Se produjo un error');
-//     }); 
+let miPromesa = new Promise((resolver, rechazar)=>{ //aqui simplemente declaro los parametros  para las funciones
+    let expresion = true;
+    if(expresion)//esta es la condicion
+        resolver('Resuelto correctamente'); //si cumple la condicion llamo a mi funcion que fue mandada como parametro y le mando el 'Resuelto correctamente'
+    else
+        rechazar('Se produjo un error');
+    }); 
 
-//Para mandarla a llamar se usa el then
-                //estos son argumentos (funciones de tipo flecha)
-//miPromesa.then(valor => console.log(valor),error => console.log(error));
-// miPromesa
-// .then(
-//     valor =>console.log(valor)
-// )
-// .catch(error=>console.log(error));
+//Para mandar  a llamar se usa el then //estos son argumentos (funciones)
+// Al momento de llamar con el then mando como parametros 2 funciones pero sin ejecutarse, (prometo luego ejecutarte) , luego de eso
+// se entra al if y si cumple la condicion llama a la funcion que fue mandada como parametro y le pasa el resuelt correctamente
+
+
+//miPromesa.then(valor => console.log(valor),error => console.log(error)); 
+miPromesa           //aqui recien se CREA el cuerpo de la funcion en el caso del then
+.then(
+    valor =>console.log(valor)
+)
+.catch(error=>console.log(error)); //aqui recien se CREA el cuerpo de la funcion en el caso del catch
+
+let miPromesa2 = new Promise((funcion1, funcion2)=>{
+    let numero= 4;
+    if (numero > 4) 
+            funcion1(8);
+        
+    else 
+            funcion2(5);    
+    });
+
+miPromesa2.then(valor => console.log(8* valor)).catch(valor => console.log(9*valor));
 
 
 /*
@@ -47,3 +61,5 @@ async function miFunctionConPromesa(){
 }
 
 miFunctionConPromesa().then(valor =>console.log(valor));
+
+
