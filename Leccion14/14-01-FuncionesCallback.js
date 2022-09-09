@@ -30,25 +30,25 @@
 
 // Llamadas asíncronas  con uso setTimeout
 
-// function miFuncionCallback (){
-//     console.log('saludo asíncrono después de 3 seg');
-// }
+function miFuncionCallback (){
+    console.log('saludo asíncrono después de 3 seg');
+}
 
-// setTimeout(miFuncionCallback, 3000);//se manda como parametro primero la funcion y luego el tiempo 3000 = 3sg
+setTimeout(miFuncionCallback, 3000);//se manda como parametro primero la funcion y luego el tiempo 3000 = 3sg
 
-// setTimeout(function()  {console.log("saludo asincrono 2 ")}, 7000);
+setTimeout(function()  {console.log("saludo asincrono 2 ")}, 7000);
 
 
-// setTimeout(function()  {console.log("saludo asincrono 3 ")}, 5000);
+setTimeout(function()  {console.log("saludo asincrono 3 ")}, 5000);
 
 //Aqui se logra evidenciar lo asíncrono pues la ultima funcion se ejecuta antes que la 2da 
 
 //Funcion SetInterval similar al setTimeout , recibe como parametro una callback
 //La diferencia radica en que la setinterval manda a llamar a la funcion varias veces a diferencia de la de 
 //set timeout en la cual ocurre una llamada una vez que se cumpla cierto tiempo
-let reloj = () => {
-    let fecha = new Date();
-    console.log(`${fecha.getHours()}: ${fecha.getMinutes()}:${fecha.getSeconds()}`); 
-}
+// let reloj = () => {
+//     let fecha = new Date();
+//     console.log(`${fecha.getHours()}: ${fecha.getMinutes()}:${fecha.getSeconds()}`); 
+// }
 
-setInterval(reloj, 5000); //5 segundos
+// setInterval(reloj, 5000); //5 segundos

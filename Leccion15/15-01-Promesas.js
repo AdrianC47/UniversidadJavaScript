@@ -11,15 +11,15 @@ Cuando se ha resuelto correctamente se usa el then() y si se ha tenido un error 
 
 // let miPromesa = new Promise((resolver, rechazar)=>{
 //     let expresion = true;
-//     if(expresion)
+//     if(expresion)//esta es la condicion
 //         resolver('Resuelto correctamente');
 //     else
 //         rechazar('Se produjo un error');
 //     }); 
 
-// //Para mandarla a llamar se usa el then
-//                 //estos son argumentos (funciones de tipo flecha)
-// //miPromesa.then(valor => console.log(valor),error => console.log(error));
+//Para mandarla a llamar se usa el then
+                //estos son argumentos (funciones de tipo flecha)
+//miPromesa.then(valor => console.log(valor),error => console.log(error));
 // miPromesa
 // .then(
 //     valor =>console.log(valor)
@@ -31,11 +31,19 @@ Cuando se ha resuelto correctamente se usa el then() y si se ha tenido un error 
 Funcion setTimeout y Promesas en JavaScript
 */
 
-let miPromesa = new Promise((resolver)=>{
-    console.log("Inicio promesa");
-    setTimeout(()=>resolver('Saludos con promesa y Timeout'),3000);
-    console.log("Fin promesa");
-});
+// let miPromesa = new Promise((resolver)=>{
+//     console.log("Inicio promesa");
+//     setTimeout(()=>resolver('Saludos con promesa y Timeout'),3000);
+//     console.log("Fin promesa");
+// });
 
-miPromesa.then(valor=>console.log(valor));
-    
+// miPromesa.then(valor=>console.log(valor+ "dsffsd"));
+
+// Palabra Async con  Promesas en JavaScript
+
+// async indica que una función regresa una promesa
+async function miFunctionConPromesa(){
+    return 'saludos con promesa y async';
+}
+
+miFunctionConPromesa().then(valor =>console.log(valor));
