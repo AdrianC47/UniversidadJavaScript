@@ -1,33 +1,18 @@
-<!DOCTYPE html>
-<html >
+<html  >
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplo Formulario con JavaScript</title>
+    <title>Manejo DOM con JavaScript Formulario</title>
 </head>
 <body>
-   <form id ="formulario">
-        Nombre: <input type="text" name="nombre" value="Elliot">
-        <br>
-        Apellido: <input type="text" name="apellido" value="Alderson">
-        <br>
-   </form>
-   <button onclick="mostrarValores()">Mostar</button>
-   <div id="valores"> </div>
-   <script>
-    function mostrarValores() {
-        let formulario = document.forms['formulario']; //se usa el atributo forms e indicamos el id del formulario al cual queremos acceder
-        let texto = ' ';
-        let nombre = formulario['nombre'];
-        console.log(nombre.value);
-        let apellido = formulario['apellido']
-        console.log(apellido.value)
-        texto= nombre.value +  '<br/>' + apellido.value;
-        // for (let elemento of formulario) {
-        //     texto += elemento.value + '<br/>'
-        // }
-        document.getElementById("valores").innerHTML = texto;
-    }
-   </script>
+    <h1>Manejo DOM con JavaScript</h1>
+    <button onclick="mostrar()">Mostrar</button>
+    <br>
+    <script>
+        document.write("Indian Summer The Doors");
 
+        function mostrar() {
+            document.write("Take Care")
+        }
+    </script>
 </body>
 </html>
