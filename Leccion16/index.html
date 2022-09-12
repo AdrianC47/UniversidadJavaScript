@@ -8,12 +8,12 @@
     <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
     <p id ="parrafo">Saludos!!</p>
     <script>
-        let cabecero = document.getElementById('cabecero').innerHTML;//Inner recupera el texto que es interno
-        console.log("valor cabecero: " + cabecero);
+        let cabecero = document.getElementById('cabecero');//Inner recupera el texto que es interno
+        console.log(`valor cabecero: ${cabecero}` );
         let parrafo = document.getElementById('parrafo');
-        console.log("valor parrafo: " + parrafo.innerHTML ); //se puede acceder tambien de esta manera
-        console.log("Saludos desde JavaScript");
-        
+        console.log(`valor parrafo:  ${parrafo}` ); //se puede acceder tambien de esta manera
+        parrafo.innerHTML = 'Nuevo valor del parrafo'; //se modifica el contenido
+        cabecero.innerHTML = 'Nuevo valor del cabecero';
     </script>
 </body>
 </html>
