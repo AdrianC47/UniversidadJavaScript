@@ -5,10 +5,15 @@
     <title>Ejemplo DOM con JavaScript</title>
 </head>
 <body>
-    <h1>Ejemplo DOM con JavaScript</h1>
-    <p>Saludos!!</p>
+    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <p id ="parrafo">Saludos!!</p>
     <script>
+        let cabecero = document.getElementById('cabecero').innerHTML;//Inner recupera el texto que es interno
+        console.log("valor cabecero: " + cabecero);
+        let parrafo = document.getElementById('parrafo');
+        console.log("valor parrafo: " + parrafo.innerHTML ); //se puede acceder tambien de esta manera
         console.log("Saludos desde JavaScript");
+        
     </script>
 </body>
 </html>
