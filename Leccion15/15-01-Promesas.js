@@ -101,3 +101,26 @@ async function funcionConPromesaYAwait2(){
 };
 
 funcionConPromesaYAwait2();
+
+
+// Promesas, Await y Async y SetTimeout
+
+async function funcionConPromesaAwaitTimeout(){
+    let miPromesa = new Promise(resolver => {
+        setTimeout(()=> resolver('promesa con await y timeout'), 3000);
+    });
+    console.log(await miPromesa);
+}
+
+funcionConPromesaAwaitTimeout();
+
+
+async function funcionConPromesaAwaitTimeout2(){
+    let miPromesa = new Promise(resolver => {
+        setTimeout(()=> resolver(7), 3000);
+    });
+    console.log(await miPromesa * 7);
+    console.log("Fin Funcion") //Esto no se imprime hasta que se haya terminado de procesar la funcion
+}
+
+funcionConPromesaAwaitTimeout2();
