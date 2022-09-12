@@ -6,14 +6,21 @@
 </head>
 <body>
     <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
-    <p id ="parrafo">Saludos!!</p>
+    <p id ="parrafo1">Saludos!!</p>
+    <p id ="parrafo2">Otro parrafo</p>
     <script>
-        let cabecero = document.getElementById('cabecero');//Inner recupera el texto que es interno
-        console.log(`valor cabecero: ${cabecero}` );
-        let parrafo = document.getElementById('parrafo');
-        console.log(`valor parrafo:  ${parrafo}` ); //se puede acceder tambien de esta manera
-        parrafo.innerHTML = 'Nuevo valor del parrafo'; //se modifica el contenido
-        cabecero.innerHTML = 'Nuevo valor del cabecero';
-    </script>
+    //     let cabecero = document.getElementById('cabecero');
+    //     console.log(`valor cabecero: ${cabecero}` );//Inner recupera el texto que es interno
+    //     let parrafo = document.getElementById('parrafo');
+    //     console.log(`valor parrafo:  ${parrafo}` ); 
+    //     parrafo.innerHTML = 'Nuevo valor del parrafo'; //se modifica el contenido
+    //     cabecero.innerHTML = 'Nuevo valor del cabecero';
+        let parrafos = document.getElementsByTagName('p');
+        console.log(`N° de párrafos: ${parrafos.length}`);
+        for (let index = 0; index < parrafos.length; index++) {
+            console.log(`index: ${index} - ${parrafos[index].innerHTML}`);
+            
+        }
+     </script>
 </body>
 </html>
