@@ -11,9 +11,9 @@
     Apellido: <input type="text" id="apellido">
     <script>
         document.getElementById('nombre').addEventListener('focus', cambiar); //indico que cuando pase el evento focus se dispare el evento cambiar
-        document.getElementById('nombre').addEventListener('blur', regresar);
+        document.getElementById('nombre').addEventListener('blur', (evento)=>{evento.target.style.background='pink'});//las funciones flecha aqui no se pueden reutilizar
         document.getElementById('apellido').addEventListener('focus', cambiar);
-        document.getElementById('apellido').addEventListener('blur', regresar);
+        document.getElementById('apellido').addEventListener('blur', (evento)=>{evento.target.style.background=''});
         
         function cambiar(evento) { //recibo el evento que se esta ejecutando, sin embargo esto es opcional
             let componente = evento.target // primero recupero el evento y con el target se recupera elcomponente
