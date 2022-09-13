@@ -4,20 +4,17 @@
     <title>Manejo DOM con JavaScript Formulario</title>
 </head>
 <body>
-    <h1 id = "titulo" onmousedown="rojo(this)" onmouseup="verde(this)" onclick="azul(this)">Manejo DOM con JavaScript</h1>
+    <h1 id = "titulo">Manejo DOM con JavaScript</h1>
     <br>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <br/><br/>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
     <script>
-        function rojo(valor) {
-            console.log('onmousedown cambio a rojo');
-            valor.style.color='red';
+        function cambiar(valor) {
+            valor.style.background = 'orange';
         }
-        function  verde(valor){
-            console.log('onmouseup cambio a verde');
-            valor.style.color = 'green';
-        }
-        function  azul(valor){
-            console.log('onclick cambio a azul');
-            valor.style.color = 'blue';
+        function regresar(elementoInput) {
+            elementoInput.style.background ='white';
         }
     </script>
 </body>
