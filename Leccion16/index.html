@@ -3,23 +3,14 @@
     <meta charset="UTF-8">
     <title>Manejo DOM con JavaScript Formulario</title>
 </head>
-<body onload="entrar()">
+<body>
     <h1 id = "titulo">Manejo DOM con JavaScript</h1>
     <br>
-    <div id ='mostrar'></div>
+    Nombre: <input type="text" onchange="convertir(this)"/>
     <script>
-        function entrar() {
-            alert('Entrando a la pagina web');
-            let texto = '';
-            //preguntamos si las cookies estan habilitadas
-            if(navigator.cookieEnabled){  //el navigator es un objeto de JS y si estamos trabajando en una pagina, entonces podemos acceder inmediatamente
-                texto = "Cookies estan habilitadas";
-            }
-            else{
-                texto = "Cookies están inhabilitadas";
-            }
-            document.getElementById("mostrar").innerHTML = texto;
-            }
+        function convertir(nombreInput) {
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
     </script>
 </body>
 </html>
