@@ -6,24 +6,30 @@
 <body>
     <h1 id = "titulo">Manejo DOM con JavaScript</h1>
     <br>
-    Nombre: <input type="text" id="nombre">
-    <br/><br/>
-    Apellido: <input type="text" id="apellido">
+    <form id="forma">
+        Nombre: <input type="text" id="nombre">
+        <br/><br/>
+        Apellido: <input type="text" id="apellido">
+    </form>
     <script>
-        document.getElementById('nombre').addEventListener('focus', cambiar); //indico que cuando pase el evento focus se dispare el evento cambiar
-        document.getElementById('nombre').addEventListener('blur', (evento)=>{evento.target.style.background='pink'});//las funciones flecha aqui no se pueden reutilizar
-        document.getElementById('apellido').addEventListener('focus', cambiar);
-        document.getElementById('apellido').addEventListener('blur', (evento)=>{evento.target.style.background=''});
-        
-        function cambiar(evento) { //recibo el evento que se esta ejecutando, sin embargo esto es opcional
-            let componente = evento.target // primero recupero el evento y con el target se recupera elcomponente
-            componente.style.background = 'yellow';
-        }
+        const forma = document.getElementById("forma");
+        forma.addEventListener('focus', (evento)=>{evento.target.style.background='pink'}, true);
+        forma.addEventListener('blur', (evento)=>{evento.target.style.background='cyan'}, true);
 
-        function regresar(evento) {
-            let componente = evento.target
-            componente.style.background = 'white';
-        }
-    </script>
+    //     document.getElementById('nombre').addEventListener('focus', cambiar); //indico que cuando pase el evento focus se dispare el evento cambiar
+    //     document.getElementById('nombre').addEventListener('blur', (evento)=>{evento.target.style.background='pink'});//las funciones flecha aqui no se pueden reutilizar
+    //     document.getElementById('apellido').addEventListener('focus', cambiar);
+    //     document.getElementById('apellido').addEventListener('blur', (evento)=>{evento.target.style.background=''});
+        
+    //     function cambiar(evento) { //recibo el evento que se esta ejecutando, sin embargo esto es opcional
+    //         let componente = evento.target // primero recupero el evento y con el target se recupera elcomponente
+    //         componente.style.background = 'yellow';
+    //     }
+
+    //     function regresar(evento) {
+    //         let componente = evento.target
+    //         componente.style.background = 'white';
+    //     }
+    // </script>
 </body>
 </html>
