@@ -4,16 +4,20 @@
     <title>Manejo DOM con JavaScript Formulario</title>
 </head>
 <body>
-    <h1 id ="titulo">Manejo DOM con JavaScript</h1>
+    <h1 onclick="cambiarTexto(this)">Manejo DOM con JavaScript</h1>
     <button onclick="mostrar()">Mostrar</button>
     <br>
     <!-- <img id="imagen" src="El Género Bobo.jpg"> -->
     <script>
      
-        function mostrar() {
-            document.getElementById('titulo').style.color ='cyan';
+        function cambiarTexto(titulo) {
+            console.log(titulo);
+            console.log(titulo.innerHTML);
+            titulo.innerHTML='Cambiamos el  Título'
+            // document.getElementById('titulo').style.color ='cyan';
             // document.getElementById('titulo').innerHTML += '<br/>Nuevo Titulo In the Summer'
             // document.getElementById('imagen').src ='El Manifiesto Desastre.jpg'
+            console.log(titulo.innerHTML);
         }
     </script>
 </body>
