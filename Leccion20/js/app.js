@@ -10,14 +10,7 @@ const egresos = [
 
 
 
-let cargarCabecero = ()=>{
-    let presupuestoTotal = totalIngresos() - totalEgresos();
-    let porcentaje = totalEgresos() / totalIngresos();
-    document.getElementById('presupuesto').innerHTML = presupuestoTotal;
-    document.getElementById('porcentaje').innerHTML = porcentaje;
-    document.getElementById('ingresos').innerHTML = totalIngresos();
-    document.getElementById('egresos').innerHTML = totalEgresos();
-};
+
 let cargarApp = ()=>{
     cargarCabecero();
 };
@@ -36,5 +29,27 @@ let totalEgresos = ()=>{
         totalEgreso += egreso.valor;
     }
     return totalEgreso;
+
+
+}
+
+let cargarCabecero = ()=>{
+    let presupuestoTotal = totalIngresos() - totalEgresos();
+    let porcentaje = totalEgresos() / totalIngresos();
+    document.getElementById('presupuesto').innerHTML = formatoMoneda(presupuestoTotal);
+    document.getElementById('porcentaje').innerHTML = formatoPorcentaje(porcentaje);
+    document.getElementById('ingresos').innerHTML = formatoMoneda(totalIngresos());
+    document.getElementById('egresos').innerHTML = formatoMoneda(totalEgresos());
+
+};
+
+const formatoMoneda = (valor)=>{
+    //toLocaleString regresa una fecha convertida en una cadena usando el idioma local pero se lo puede usar para el formato
+                                                                    //minimo de digitos para los ctvs
+    return valor.toLocaleString('en-US',{style:'currency', currency: 'USD', minimunFractionDigits:2});
+}
+
+const formatoPorcentaje = (valor) => {
+    return valor.toLocaleString('en-US',{style:'percent', minimunFractionDigits:2});
 }
 
