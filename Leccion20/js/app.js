@@ -73,7 +73,9 @@ function crearIngresoHTML(ingreso) {
             <div class="elemento_valor">${formatoMoneda(ingreso.valor)}</div>
             <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
-                    <ion-icon name="close-circle-outline"></ion-icon>
+                    <ion-icon name="close-circle-outline"
+                    onclick='eliminarIngreso(${ingreso.id})'>
+                    </ion-icon>
                 </button>
             </div>
         </div>
@@ -106,4 +108,11 @@ const crearEgresoHTML = (egreso)=>{
     </div>
     `;
     return egresoHTML;
+}
+
+const eliminarIngreso = (id)=>{
+    let indiceEliminar = ingresos.findIndex(ingreso => ingreso.id ===id); //funcion similar a un for que busca un objeto con el mismo id mandado
+    //for (let ingreso of ingresos )
+    ingresos.splice(indiceEliminar, 1); //elimino ingreso con el indice recuperado
+    cargarApp();
 }
