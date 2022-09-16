@@ -101,7 +101,9 @@ const crearEgresoHTML = (egreso)=>{
             <div class="elemento_porcentaje">${formatoPorcentaje(egreso.valor/totalEgresos())}</div>
             <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
-                    <ion-icon name="close-circle-outline"></ion-icon>
+                    <ion-icon name="close-circle-outline"
+                    onclick='eliminarEgreso(${egreso.id})'>
+                    </ion-icon>
                 </button>
             </div>
         </div>
@@ -114,5 +116,11 @@ const eliminarIngreso = (id)=>{
     let indiceEliminar = ingresos.findIndex(ingreso => ingreso.id ===id); //funcion similar a un for que busca un objeto con el mismo id mandado
     //for (let ingreso of ingresos )
     ingresos.splice(indiceEliminar, 1); //elimino ingreso con el indice recuperado
+    cargarApp();
+}
+
+const eliminarEgreso = (id)=>{
+    let indiceEliminar = egresos.findIndex(egreso => egreso.id === id);
+    egresos.splice(indiceEliminar,1);
     cargarApp();
 }
