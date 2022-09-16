@@ -50,11 +50,11 @@ let cargarCabecero = ()=>{
 const formatoMoneda = (valor)=>{
     //toLocaleString regresa una fecha convertida en una cadena usando el idioma local pero se lo puede usar para el formato
                                                                     //minimo de digitos para los ctvs
-    return valor.toLocaleString('en-US',{style:'currency', currency: 'USD', minimunFractionDigits:2});
+    return valor.toLocaleString('es-EC',{style:'currency', currency: 'USD', minimunFractionDigits:2});
 }
 
 const formatoPorcentaje = (valor) => {
-    return valor.toLocaleString('en-US',{style:'percent', minimunFractionDigits:2});
+    return valor.toLocaleString('es-EC',{style:'percent', minimunFractionDigits:2});
 }
 
 const cargarIngresos = () =>{
