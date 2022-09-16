@@ -1,11 +1,13 @@
 const ingresos  =[ 
     new Ingreso('Salario', 2100.00),
     new Ingreso('Venta Coche', 1500),
+    new Ingreso('Alquiler', 780),
 ];
 
 const egresos = [
     new Egreso('Renta departamento', 900.00),
-    new Egreso('Ropa', 400)
+    new Egreso('Ropa', 400),
+    new Egreso('Laptop', 1500),
 ]; 
 
 
@@ -13,6 +15,7 @@ const egresos = [
 
 let cargarApp = ()=>{
     cargarCabecero();
+    cargarIngresos();
 };
 
 let totalIngresos = ()=>{
@@ -53,3 +56,27 @@ const formatoPorcentaje = (valor) => {
     return valor.toLocaleString('en-US',{style:'percent', minimunFractionDigits:2});
 }
 
+const cargarIngresos = () =>{
+    let ingresosHTML = '';
+    for (let ingreso  of ingresos) {
+        ingresosHTML += crearIngresoHTML(ingreso);
+    }
+    document.getElementById('lista-ingresos').innerHTML = ingresosHTML;
+}
+
+function crearIngresoHTML(valor) {
+    let ingresoHTML = `
+    <div class="elemento limpiarEstilos">
+        <div class="elemento_descripcion">${valor.descripcion}</div>
+        <div class="derecha limpiarEstilos">
+            <div class="elemento_valor">${formatoMoneda(valor.valor)}</div>
+            <div class="elemento_eliminar">
+                <button class="elemento_eliminar--btn">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    `;
+    return ingresoHTML;
+}
