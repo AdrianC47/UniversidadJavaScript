@@ -32,6 +32,23 @@
             </div>
         </div>
     </div>
+    <!--Debido a que no se esta trabajando con un servidor y al dar click en en button pues se hace un submit del formulario y se borra la info del formulario
+    por ello se pone el onsubmit en false-->
+    <form id="form" onsubmit="return false;"> 
+        <div class="agregar">
+            <div class="agregar_contenedor">
+                <select class="agregar_tipo" id="tipo">
+                    <option value="Ingreso" selected>+</option>
+                    <option value="Egreso">-</option>
+                </select>
+                <input type="text" class="agregar_descripcion" placeholder="Agregar Descripción" id="descripcion"/>
+                <input type="number" class="agregar_valor" placeholder="Valor" id="valor" step="any"/> <!--Setp any es para que vayan tambien decimales-->
+                <button class="agregar_btn" onclick="agregarDato()">
+                    <ion-icon name="shield-checkmark-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </form>
     <div class="contenedor limpiarEstilos">
         <div class="ingreso">
             <h2 class="ingreso_titulo">Ingresos</h2>
