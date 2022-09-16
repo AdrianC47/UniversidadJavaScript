@@ -7,7 +7,7 @@ const ingresos  =[
 const egresos = [
     new Egreso('Renta departamento', 900.00),
     new Egreso('Ropa', 400),
-    new Egreso('Laptop', 1500),
+    new Egreso('Laptop', 1500)
 ]; 
 
 
@@ -84,6 +84,14 @@ function crearIngresoHTML(ingreso) {
     return ingresoHTML;
 }
 
+const eliminarIngreso = (id)=>{
+    let indiceEliminar = ingresos.findIndex(ingreso => ingreso.id ===id); //funcion similar a un for que busca un objeto con el mismo id mandado
+    //for (let ingreso of ingresos )
+    ingresos.splice(indiceEliminar, 1); //elimino ingreso con el indice recuperado
+    cargarApp();
+}
+
+
 const cargarEgresos = ()=>{
     let egresosHTML = '';
     for (let egreso of egresos) {
@@ -91,6 +99,8 @@ const cargarEgresos = ()=>{
     }
     document.getElementById('lista-egresos').innerHTML=egresosHTML;
 }
+
+
 
 const crearEgresoHTML = (egreso)=>{
     let egresoHTML = `
@@ -109,14 +119,8 @@ const crearEgresoHTML = (egreso)=>{
         </div>
     </div>
     `;
+ 
     return egresoHTML;
-}
-
-const eliminarIngreso = (id)=>{
-    let indiceEliminar = ingresos.findIndex(ingreso => ingreso.id ===id); //funcion similar a un for que busca un objeto con el mismo id mandado
-    //for (let ingreso of ingresos )
-    ingresos.splice(indiceEliminar, 1); //elimino ingreso con el indice recuperado
-    cargarApp();
 }
 
 const eliminarEgreso = (id)=>{
@@ -124,3 +128,24 @@ const eliminarEgreso = (id)=>{
     egresos.splice(indiceEliminar,1);
     cargarApp();
 }
+
+
+let agregarDato = ()=>{
+    let form = document.getElementById('form');
+    let tipo = form['tipo'];
+    let descripcion = form['descripcion'];
+    let valor = form['valor'];
+    if (descripcion.value != '' && valor.value !='') {
+        if (tipo.value === 'Ingreso') {
+            ingresos.push(new Ingreso(descripcion.value, +(valor.value)));//el + convierte la cadena a numero
+            cargarApp();
+        } else if  (tipo.value ==='Egreso'){
+            console.log("egresos")
+            egresos.push(new Egreso(descripcion.value, +(valor.value))); //otra forma de convertir a Numero
+             cargarCabecero();
+             cargarEgresos();
+        }
+    }
+}
+
+ 
